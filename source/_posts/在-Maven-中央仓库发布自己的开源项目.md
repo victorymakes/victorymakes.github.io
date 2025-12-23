@@ -2,7 +2,7 @@
 title: 在 Maven 中央仓库发布自己的开源项目
 seo_title: how-to-publish-to-maven
 date: 2020-07-23 17:01:41
-tags: [Java,Maven]
+tags: [Java, Maven]
 categories: [Program]
 ---
 
@@ -21,7 +21,7 @@ categories: [Program]
 - [WeChat](https://mp.weixin.qq.com/?token=&lang=zh_CN)
 - [Pinterest](https://developers.pinterest.com/docs/getting-started/introduction/)
 - [微博 API](https://open.weibo.com/wiki/%E5%BE%AE%E5%8D%9AAPI)
-- [Medium’s API](https://github.com/Medium/medium-api-docs) 
+- [Medium’s API](https://github.com/Medium/medium-api-docs)
 - [Hacker News API](https://github.com/HackerNews/API)
 - ......
 
@@ -55,21 +55,22 @@ categories: [Program]
 {% asset_img set-tags.png Github repo tags %}
 
 设置 Tag：
+
 ```
 git tag -a [version] -m [commit message]
 ```
+
 推送到服务器：
+
 ```
 git push origin [version]
 ```
-
 
 ### 打包、发布到中央仓库
 
 代码完成实现并开源到 GitHub 后，进行 Maven 发布管理。发布到中央仓库的话，我们需要使用 Sonatype 为开源项目提供托管服务。可以通过它发布快照或是稳定版到 Maven 中央仓库。我们只要注册一个 Sonatype 的 JIRA 账号、创建一个 Jira 任务，然后添加对应的 pom.xml 配置。
 
-
-#### OSSRH 发布准备 
+#### OSSRH 发布准备
 
 **1.** 注册账号：[注册地址](https://issues.sonatype.org/secure/Signup!default.jspa)
 
@@ -77,29 +78,30 @@ git push origin [version]
 
 {% asset_img create-jira-1.png 创建 Jira 工单-1 %}
 {% asset_img create-jira-2.png 创建 Jira 工单-2 %}
-    
+
 这里有两个注意点：
 
-- 填写 groupId 的时候，如果需要对应的域名真实且属于你，不过我们可以使用 GitHub 的 com.github.*username* 或 io.github.*username*。
+- 填写 groupId 的时候，如果需要对应的域名真实且属于你，不过我们可以使用 GitHub 的 com.github._username_ 或 io.github._username_。
 - 当你发布了你的第一个 release 版本的时候，记得要在这个任务上回复 comment 告知 OSSRH。
 - 工单进程可以看工单的状态和对应的 comment 信息，按照他们的说明走即可，工单状态变为 **RESOLVED** 时可提交 Jar。
 
 #### 生成密钥
- 
+
 - Linux：可以参考 [Working with PGP Signatures](https://central.sonatype.org/pages/working-with-pgp-signatures.html)
 - Windows：使用 Kleopatra，[下载地址](https://gpg4win.org/download.html)
-  
+
 创建流程如下：
-  
-> 文件 -> 新建密钥对 -> 创建个人 OpenPGP 密钥对  -> 填写个人信息 -> 输入密码密码 -> 上传到目录服务
-  
-  {% asset_img create-secret.png 生成秘钥 %}
+
+> 文件 -> 新建密钥对 -> 创建个人 OpenPGP 密钥对 -> 填写个人信息 -> 输入密码密码 -> 上传到目录服务
+
+{% asset_img create-secret.png 生成秘钥 %}
 
 #### Maven 项目调整
 
 **1.** 修改 pom.xml
 
-添加项目已经开发者信息    
+添加项目已经开发者信息
+
 ```xml
     <licenses>
         <license>
@@ -108,19 +110,20 @@ git push origin [version]
         </license>
     </licenses>
     <scm>
-        <url>https://github.com/vioao/wechat-sdk.git</url>
-        <connection>scm:https://github.com/vioao/wechat-sdk.git</connection>
+        <url>https://github.com/victorymakes/wechat-sdk.git</url>
+        <connection>scm:https://github.com/victorymakes/wechat-sdk.git</connection>
     </scm>
     <developers>
         <developer>
-            <name>vioao</name>
-            <email>vioao91@gmail.com</email>
-            <url>http://blog.vioao.site</url>
-    </developer>    
-    
+            <name>victorymakes</name>
+            <email>victorylaunches@gmail.com</email>
+            <url>http://blog.victoryhub.cc</url>
+    </developer>
+
 ```
-    
+
 添加打包构建相关信息
+
 ```xml
          <build>
             <plugins>
@@ -134,7 +137,9 @@ git push origin [version]
             </plugins>
         </build>
 ```
+
 添加发布相关配置信息
+
 ```xml
         <profiles>
             <profile>
@@ -221,9 +226,11 @@ git push origin [version]
                 <id>oss</id>                <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
             </repository>
         </distributionManagement>
-    
+
 ```
+
 添加 settings.xml 配置
+
 ```xml
         <!-- oss 配置 -->
         <servers>
@@ -233,7 +240,7 @@ git push origin [version]
                 <password> Jira 密码</password>
             </server>
         </servers>
-        
+
         <!-- gpg 配置 -->
         <profiles>
             <profile>
@@ -246,7 +253,7 @@ git push origin [version]
                    <gpg.passphrase>${ 上一步的密钥密码 }</gpg.passphrase>
                </properties>
             </profile>
-        </profiles>    
+        </profiles>
 ```
 
 #### 发布
@@ -254,23 +261,25 @@ git push origin [version]
 **发布 Snapshot 版本：**
 
 **1.** 修改 pom.xml 的 version 添加 -SNAPSHOT 后缀
-       
+
 ```xml
         <version>1.2.0-SNAPSHOT</version>
 ```
-**2.**  `mvn clean deploy`
- 
+
+**2.** `mvn clean deploy`
+
 **3.** 发布后可以上[该地址](https://oss.sonatype.org/content/repositories/snapshots/)查找你发布的 Jar
 
 **发布 Release 版本：**
 
 **1.** 修改 pom.xml 的 version 移除 -SNAPSHOT 后缀，或手动设置版本号 `mvn versions:set -DnewVersion=1.2.0`
+
 ```xml
         <version>1.2.0</version>
 ```
-        
-**2.**  `mvn clean deploy -P release`
-    
+
+**2.** `mvn clean deploy -P release`
+
 **3.** 正式版发布后就可以在[中央仓库](https://mvnrepository.com)查找到了
 
 参考：

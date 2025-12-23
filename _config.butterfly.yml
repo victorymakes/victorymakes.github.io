@@ -1,4 +1,4 @@
-url: https://blog.vioao.site
+url: https://blog.victoryhub.cc
 root: /
 
 menu:
@@ -18,11 +18,11 @@ highlight_copy: true
 highlight_theme: mac
 
 social:
-  fab fa-github: https://github.com/vioao || Github || "#hdhfbb"
-  fas fa-envelope: mailto:vioao91@gmail.com || Email || "#000000"
+  fab fa-github: https://github.com/victorymakes || Github || "#hdhfbb"
+  fas fa-envelope: mailto:victorylaunches@gmail.com || Email || "#000000"
 
 avatar:
-  img: /static/common/avatar.jpeg
+  img: /static/common/avatar.png
   effect: false # 頭像會一直轉圈
 
 disable_top_img: true
@@ -65,7 +65,6 @@ footer:
     since: 2016
   custom_text: <div class="beian"><a href="http://beian.miit.gov.cn/" rel="noopener" target="_blank">粤ICP备2024191092号</a></div>
 
-
 aside:
   enable: true
   hide: false
@@ -83,7 +82,7 @@ aside:
       enable: true
       icon: fab fa-github
       text: Follow Me
-      link: https://github.com/vioao
+      link: https://github.com/victorymakes
   card_announcement:
     enable: false
   card_recent_post:
@@ -117,7 +116,7 @@ aside:
     sort_order: # Don't modify the setting unless you know how it works
   card_post_series:
     enable: true
-    orderBy: 'date' # Order by title or date
+    orderBy: "date" # Order by title or date
     order: -1 # Sort of order. 1, asc for ascending; -1, desc for descending
 
 busuanzi:
@@ -142,7 +141,7 @@ kramed:
 
 sharejs:
   enable: true
-  sites: facebook,twitter,wechat,weibo,qq  #想要顯示的內容
+  sites: facebook,twitter,wechat,weibo,qq #想要顯示的內容
 
 # Local search
 local_search:
