@@ -1,0 +1,13 @@
+# Ignore common folders
+.next
+node_modules
+build
+
+# Ignore specific files
+src/components/ui/*
+pnpm-lock.yaml
+
+# others
+.vscode
+.idea
+.claude
