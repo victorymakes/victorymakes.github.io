@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 
 import { header } from "@/configurations/header";
 import { metadata } from "@/configurations/metadata";
-import { NavBarItem, NestedMenuItem } from "@/schemas/site-configuration";
+import { NavBarItem, NestedMenuItem } from "@/types/configuration";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import {

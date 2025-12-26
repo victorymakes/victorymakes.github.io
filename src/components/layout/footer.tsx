@@ -9,7 +9,7 @@ import { metadata } from "@/configurations/metadata";
 import { socialLinks } from "@/configurations/social-links";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
-import { LinkBadge } from "../shared/link-badge";
+import { LinkBadge } from "@/components/shared/link-badge";
 
 export function Footer() {
   const t = useTranslations();
