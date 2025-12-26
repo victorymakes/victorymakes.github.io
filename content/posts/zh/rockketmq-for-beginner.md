@@ -14,7 +14,6 @@ category:
   title: Program
 ---
 
-
 ### 简介
 
 Apache RocketMQ 是阿里开源的一款高性能、高吞吐量的分布式消息中间件。相比于 Kafka，其拥有更好的实时性和消息可靠性。更适用于和 Money 相关的系统。它支持如下特性：

@@ -20,5 +20,13 @@ export const header: NavBarConfig = {
       external: true,
     },
   ],
-  actions: [],
+  actions: [
+    {
+      item: {
+        href: "https://github.com/victorymakes/victorymakes.github.io",
+        title: "header.useTemplate",
+        external: true,
+      },
+    },
+  ],
 };

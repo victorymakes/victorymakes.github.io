@@ -44,6 +44,12 @@ export default async function LocaleLayout({ children, params }: Props) {
         <link rel="icon" href="/favicon.ico" />
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/favicon.ico" />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="RSS"
+          href={`/${locale}/feed.xml`}
+        />
       </head>
       <body
         className={`${inter.variable} bg-background text-foreground antialiased`}

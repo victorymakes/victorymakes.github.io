@@ -17,7 +17,7 @@ export async function generateStaticParams() {
     getTags(locale).map((tag) => ({
       locale,
       slug: tag.id,
-    }))
+    })),
   );
 }
 

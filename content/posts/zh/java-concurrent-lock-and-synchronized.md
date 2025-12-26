@@ -14,7 +14,6 @@ category:
   title: Program
 ---
 
-
 ## 前言
 
 Java多线程编程中，保证线程安全通常会使用到`synchronized`和`Lock`。那么合适该使用`synchronized`，什么时候该使用`Lock`呢。这个就需要我们对`synchronized`和`Lock`有个清晰的了解。

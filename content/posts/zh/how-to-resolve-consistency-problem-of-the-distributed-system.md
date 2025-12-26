@@ -12,7 +12,6 @@ category:
   title: Reading
 ---
 
-
 # 为啥出现一致性问题
 
 在传统单体架构中，数据状态的处理都在同一个服务和数据库中，而具有**[ACID特性](https://baike.baidu.com/item/acid/10738?fr=aladdin)**的数据库支持强一致性，就是说数据库本身是不会出现不一致的状态的，比如我们常用的关系型数据库MySQL就是通过多版本控制协议(MVCC)的实现来保证了强一致性。

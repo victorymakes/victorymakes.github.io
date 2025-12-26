@@ -10,7 +10,6 @@ category:
   title: Program
 ---
 
-
 由于公司对电脑安全做了较多的限制。自己无法使用MySql的msi文件来安装Mysql。于是下了个mysql的zip压缩包来使用。
 [Mysql下载地址](https://dev.mysql.com/downloads/mysql/),我下的是版本为mysql-5.7.18-winx64.zip
 

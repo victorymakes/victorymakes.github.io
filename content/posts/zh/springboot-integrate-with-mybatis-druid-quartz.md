@@ -18,7 +18,6 @@ category:
   title: Program
 ---
 
-
 由于项目中定时任务逐渐增多，对系统的压力也慢慢增加。故打算将系统中的定时任务抽离出来。初步决定使用SpringBoot+mybatis+quartz的整合方式进行快速开发。
 整个整合会包含如下任务:
 

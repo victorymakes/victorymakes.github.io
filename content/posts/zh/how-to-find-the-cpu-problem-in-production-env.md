@@ -14,7 +14,6 @@ category:
   title: Program
 ---
 
-
 # 简要
 
 工作中负责的有一个项目是使用iReport+JasperReport实现的一个打印系统。最近这个线上程序经常无响应，重启后恢复正常，但是时不时还是会出现类似的问题。

@@ -59,7 +59,7 @@ export function Footer() {
             <div className="mt-2">
               <Button variant="outline" asChild>
                 <Link href="https://launchsaas.org" target="_blank">
-                  {t("Footer.builtWith")}{" "}
+                  {t("footer.builtWith")}{" "}
                   <Image
                     src="/launchsaas.png"
                     alt="LaunchSaaS"
@@ -116,7 +116,7 @@ export function Footer() {
         <div className="flex flex-col gap-4 border-t pt-6 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {new Date().getFullYear()} {metadata.name}{" "}
-            {t("Footer.allRightsReserved")}.
+            {t("footer.allRightsReserved")}.
           </p>
           <div className="flex items-center gap-2">
             <ThemeToggle type="button-group" />

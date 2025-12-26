@@ -10,7 +10,6 @@ category:
   title: Program
 ---
 
-
 ### 问题:
 
 **Structs2 action中的redirect只支持Http**,当应用部署在Https环境下时。会报错:

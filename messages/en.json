@@ -4,7 +4,8 @@
     "posts": "Posts",
     "categories": "Categories",
     "tags": "Tags",
-    "about": "About"
+    "about": "About",
+    "useTemplate": "Use this Template"
   },
   "footer": {
     "copyright": "© {year} {siteName}. All rights reserved.",
@@ -12,7 +13,14 @@
     "content": "Content",
     "resources": "Resources",
     "allRightsReserved": "All rights reserved",
-    "builtWith": "Powered by"
+    "builtWith": "Powered by",
+    "products": "Products",
+    "product": {
+      "VictoryHub": "VictoryHub",
+      "LaunchSaaS": "LaunchSaaS",
+      "Profile": "Personal Profile",
+      "Awesome": "Awesome Boilerplate"
+    }
   },
   "blog": {
     "title": "Blog",
@@ -28,7 +36,13 @@
     "categories": "Categories",
     "tags": "Tags",
     "relatedPosts": "Related Posts",
-    "postsCount": "{count} {count, plural, one {post} other {posts}}"
+    "postsCount": "{count} {count, plural, one {post} other {posts}}",
+    "rss": {
+      "title": "Subscribe via RSS",
+      "description": "Copy this link to your RSS reader (Reeder / Inoreader / Feedly / NetNewsWire, etc.) to subscribe.",
+      "copyFeed": "Copy RSS Feed URL",
+      "feedCopied": "RSS feed URL copied!"
+    }
   },
   "categories": {
     "title": "Categories",
@@ -68,9 +82,5 @@
   "share": {
     "copyLink": "Copy link",
     "linkCopied": "Link copied!"
-  },
-  "Footer": {
-    "builtWith": "Built with",
-    "allRightsReserved": "All rights reserved"
   }
 }

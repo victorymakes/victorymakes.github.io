@@ -16,7 +16,7 @@ export async function generateStaticParams() {
     getPages(locale).map((p) => ({
       locale,
       page: p.slugs,
-    }))
+    })),
   );
 }
 

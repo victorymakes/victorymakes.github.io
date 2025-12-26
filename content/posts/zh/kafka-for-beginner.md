@@ -14,7 +14,6 @@ category:
   title: Program
 ---
 
-
 ### 简介
 
 [Apache Kakfa](http://kafka.apachecn.org/intro.html) 是一个分布式流处理平台，既可以当做普通的消息中间件用于消息发布订阅，也可以存储并处理流式数据，其分布式设计使得其有较好的容错性，水平拓展性等。

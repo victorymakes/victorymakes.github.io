@@ -29,5 +29,30 @@ export const footer: FooterConfig = {
         },
       ],
     },
+    {
+      title: "footer.products",
+      menus: [
+        {
+          href: "https://launchsaas.org",
+          title: "footer.product.LaunchSaaS",
+          external: true,
+        },
+        {
+          href: "https://victoryhub.cc",
+          title: "footer.product.VictoryHub",
+          external: true,
+        },
+        {
+          href: "https://me.victoryhub.cc",
+          title: "footer.product.Profile",
+          external: true,
+        },
+        {
+          href: "https://awesome.victoryhub.cc",
+          title: "footer.product.Awesome",
+          external: true,
+        },
+      ],
+    },
   ],
 };

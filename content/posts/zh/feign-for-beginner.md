@@ -14,7 +14,6 @@ category:
   title: Program
 ---
 
-
 ## 简介
 
 [Feign](https://github.com/OpenFeign/feign)使得 `Java HTTP` 客户端编写更方便。`Feign` 灵感来源于[Retrofit](https://github.com/square/retrofit)、[JAXRS-2.0](https://jax-rs-spec.java.net/nonav/2.0/apidocs/index.html)和[WebSocket](http://www.oracle.com/technetwork/articles/java/jsr356-1937161.html)。`Feign` 最初是为了降低统一绑定[Denominator](https://github.com/Netflix/Denominator) 到 `HTTP API` 的复杂度，不区分是否支持 `Restful`。

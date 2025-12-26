@@ -11,3 +11,4 @@ pnpm-lock.yaml
 .vscode
 .idea
 .claude
+.wrangler

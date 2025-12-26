@@ -4,10 +4,8 @@ import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 
 export function getMDXComponents(components?: MDXComponents): MDXComponents {
-  const { img: _img, ...restDefaultComponents } = defaultMdxComponents;
-
   return {
-    ...restDefaultComponents,
+    ...defaultMdxComponents,
     hr: Separator,
     img: ({ className, src, alt, ...props }: React.ComponentProps<"img">) => {
       // Ensure src is a string, not an object
