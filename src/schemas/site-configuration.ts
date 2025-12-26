@@ -1,4 +1,4 @@
-import { LucideIcon } from "lucide-react";
+import type { IconType } from "react-icons";
 
 // Re-export types from configuration.ts for compatibility
 export interface MenuItem {
@@ -6,7 +6,7 @@ export interface MenuItem {
   href: string;
   messageKey?: string;
   external?: boolean;
-  icon?: LucideIcon;
+  icon?: IconType;
   description?: string;
 }
 
