@@ -1,2 +1,0 @@
-- [Victory's Blog](https://blog.victoryhub.cc/)
-- Built with Hexo and Butterfly.

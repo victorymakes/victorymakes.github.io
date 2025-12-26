@@ -1,0 +1,76 @@
+{
+  "header": {
+    "home": "Home",
+    "posts": "Posts",
+    "categories": "Categories",
+    "tags": "Tags",
+    "about": "About"
+  },
+  "footer": {
+    "copyright": "© {year} {siteName}. All rights reserved.",
+    "poweredBy": "Powered by",
+    "content": "Content",
+    "resources": "Resources",
+    "allRightsReserved": "All rights reserved",
+    "builtWith": "Powered by"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Thoughts, stories and ideas",
+    "readMore": "Read more",
+    "noPostsYet": "No posts yet. Stay tuned!",
+    "recentPosts": "Recent Posts",
+    "allPosts": "All Posts",
+    "postedOn": "Posted on",
+    "by": "by",
+    "readTime": "{minutes} min read",
+    "inCategory": "in",
+    "categories": "Categories",
+    "tags": "Tags",
+    "relatedPosts": "Related Posts",
+    "postsCount": "{count} {count, plural, one {post} other {posts}}"
+  },
+  "categories": {
+    "title": "Categories",
+    "subtitle": "Browse all categories",
+    "noCategoriesYet": "No categories yet.",
+    "postsCount": "{count} {count, plural, one {post} other {posts}}"
+  },
+  "tags": {
+    "title": "Tags",
+    "subtitle": "Browse all tags",
+    "noTagsYet": "No tags yet.",
+    "postsCount": "{count} {count, plural, one {post} other {posts}}"
+  },
+  "pagination": {
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page {current} of {total}"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "The page you are looking for does not exist.",
+    "postNotFound": "Post Not Found",
+    "categoryNotFound": "Category Not Found",
+    "tagNotFound": "Tag Not Found"
+  },
+  "post": {
+    "backToPosts": "Back to Posts",
+    "categoryPrefix": "Posts in",
+    "tagPrefix": "Posts tagged with",
+    "sharePrompt": "Share this article",
+    "shareDescription": "Help others discover this content",
+    "author": "Author",
+    "category": "Category",
+    "tags": "Tags",
+    "published": "Published"
+  },
+  "share": {
+    "copyLink": "Copy link",
+    "linkCopied": "Link copied!"
+  },
+  "Footer": {
+    "builtWith": "Built with",
+    "allRightsReserved": "All rights reserved"
+  }
+}

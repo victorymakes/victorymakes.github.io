@@ -1,0 +1,76 @@
+{
+  "header": {
+    "home": "首页",
+    "posts": "文章",
+    "categories": "分类",
+    "tags": "标签",
+    "about": "关于"
+  },
+  "footer": {
+    "copyright": "© {year} {siteName}. 保留所有权利。",
+    "poweredBy": "技术支持",
+    "content": "内容",
+    "resources": "资源",
+    "allRightsReserved": "保留所有权利",
+    "builtWith": "技术支持"
+  },
+  "blog": {
+    "title": "博客",
+    "subtitle": "思考、故事和想法",
+    "readMore": "阅读更多",
+    "noPostsYet": "暂无文章，敬请期待！",
+    "recentPosts": "最新文章",
+    "allPosts": "所有文章",
+    "postedOn": "发布于",
+    "by": "作者",
+    "readTime": "{minutes} 分钟阅读",
+    "inCategory": "分类于",
+    "categories": "分类",
+    "tags": "标签",
+    "relatedPosts": "相关文章",
+    "postsCount": "{count} 篇文章"
+  },
+  "categories": {
+    "title": "分类",
+    "subtitle": "浏览所有分类",
+    "noCategoriesYet": "暂无分类。",
+    "postsCount": "{count} 篇文章"
+  },
+  "tags": {
+    "title": "标签",
+    "subtitle": "浏览所有标签",
+    "noTagsYet": "暂无标签。",
+    "postsCount": "{count} 篇文章"
+  },
+  "pagination": {
+    "previous": "上一页",
+    "next": "下一页",
+    "page": "第 {current} 页，共 {total} 页"
+  },
+  "notFound": {
+    "title": "页面未找到",
+    "description": "您查找的页面不存在。",
+    "postNotFound": "文章未找到",
+    "categoryNotFound": "分类未找到",
+    "tagNotFound": "标签未找到"
+  },
+  "post": {
+    "backToPosts": "返回文章列表",
+    "categoryPrefix": "分类",
+    "tagPrefix": "标签",
+    "sharePrompt": "分享这篇文章",
+    "shareDescription": "帮助他人发现这篇内容",
+    "author": "作者",
+    "category": "分类",
+    "tags": "标签",
+    "published": "发布时间"
+  },
+  "share": {
+    "copyLink": "复制链接",
+    "linkCopied": "链接已复制！"
+  },
+  "Footer": {
+    "builtWith": "基于",
+    "allRightsReserved": "保留所有权利"
+  }
+}
