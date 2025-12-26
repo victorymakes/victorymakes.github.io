@@ -8,7 +8,7 @@ A modern, full-featured blog system built on [LaunchSaaS](https://launchsaas.org
 - **MDX Support** - Write blog posts in Markdown with React components
 - **Multi-language** - Built-in i18n support with next-intl (English & Chinese)
 - **Dark Mode** - Beautiful dark mode with next-themes
-- **Edge Deployment** - Deploy to Cloudflare Pages with OpenNext
+- **Edge Deployment** - Deploy to Vercel
 - **Math Support** - KaTeX integration for mathematical expressions
 - **Syntax Highlighting** - Code blocks with syntax highlighting (GitHub themes)
 - **Type-safe** - Full TypeScript support with Zod schema validation
@@ -23,7 +23,7 @@ A modern, full-featured blog system built on [LaunchSaaS](https://launchsaas.org
 - **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
 - **UI Components**: [Radix UI](https://www.radix-ui.com/)
 - **i18n**: [next-intl](https://next-intl-docs.vercel.app/)
-- **Deployment**: [Cloudflare Pages](https://pages.cloudflare.com/) with [OpenNext](https://opennext.js.org/)
+- **Deployment**: [Vercel](https://vercel.com/)
 - **Package Manager**: pnpm
 
 ## Quick Start
@@ -171,41 +171,7 @@ Posts support the following frontmatter fields:
 
 ## Deployment
 
-### Deploy to Cloudflare Pages
-
-1. Install Wrangler CLI:
-
-```bash
-pnpm add -g wrangler
-```
-
-2. Login to Cloudflare:
-
-```bash
-wrangler login
-```
-
-3. Update [wrangler.jsonc](wrangler.jsonc) with your domain:
-
-```json
-{
-  "name": "your-blog",
-  "routes": [
-    {
-      "pattern": "yourdomain.com",
-      "custom_domain": true
-    }
-  ]
-}
-```
-
-4. Deploy:
-
-```bash
-pnpm deploy
-```
-
-### Alternative Deployment Options
+### Deployment Options
 
 - **Vercel**: `vercel deploy`
 - **Netlify**: Connect your repository
@@ -218,8 +184,6 @@ pnpm deploy
 - `pnpm start` - Start production server
 - `pnpm lint` - Run ESLint
 - `pnpm format` - Format code with Prettier
-- `pnpm preview` - Preview Cloudflare build locally
-- `pnpm deploy` - Deploy to Cloudflare Pages
 
 ## Customization
 
