@@ -9,6 +9,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Providers } from "@/components/layout/providers";
 import { Toaster } from "@/components/ui/sonner";
+import { Analytics } from "@/components/shared/analytics";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -64,6 +65,7 @@ export default async function LocaleLayout({ children, params }: Props) {
             <Toaster />
           </Providers>
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );
