@@ -4,16 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Rss, Check, Copy } from "lucide-react";
 import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
+import { getURL } from "@/lib/i18n";
 
 export function RssSubscribe() {
   const [copied, setCopied] = useState(false);
   const t = useTranslations("blog.rss");
   const locale = useLocale();
 
-  const feedUrl =
-    typeof window !== "undefined"
-      ? `${window.location.origin}/${locale}/feed.xml`
-      : `/${locale}/feed.xml`;
+  const feedUrl = getURL("/feed.xml", locale, true);
 
   const copyToClipboard = async () => {
     try {

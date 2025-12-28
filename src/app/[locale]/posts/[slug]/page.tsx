@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { getPost, getPosts } from "@/lib/fumadocs";
 import {
@@ -71,11 +72,12 @@ export default async function PostPage({ params }: Props) {
         <article className="min-w-0">
           {/* Cover Image */}
           {post.data.cover && (
-            <div className="mb-8 aspect-video overflow-hidden rounded-lg">
-              <img
+            <div className="mb-8 aspect-video overflow-hidden rounded-lg relative">
+              <Image
                 src={post.data.cover}
                 alt={post.data.title}
-                className="h-full w-full object-cover"
+                fill
+                className="object-cover"
               />
             </div>
           )}

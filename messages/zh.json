@@ -42,6 +42,12 @@
       "description": "复制这个链接到你的阅读器（Reeder / Inoreader / Feedly / NetNewsWire 等）即可订阅。",
       "copyFeed": "复制 RSS 订阅链接",
       "feedCopied": "RSS 订阅链接已复制！"
+    },
+    "launchSaaS": {
+      "title": "更快构建你的 SaaS",
+      "subtitle": "几小时内发布你的 SaaS 产品，而不是几周",
+      "description": "LaunchSaaS 是一个全面的 Next.js 样板，包含身份验证、支付、数据库、邮件等功能。不要重复造轮子，专注于构建你的独特功能。",
+      "cta": "探索 LaunchSaaS →"
     }
   },
   "categories": {

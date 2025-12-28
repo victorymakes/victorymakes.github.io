@@ -23,13 +23,13 @@ function GroupedThemeToggle({
   if (!mounted) {
     return (
       <ButtonGroup>
-        <Button variant="outline" size="icon-sm">
+        <Button variant="outline" size="icon">
           <Sun className="size-4" />
         </Button>
-        <Button variant="outline" size="icon-sm">
+        <Button variant="outline" size="icon">
           <Moon className="size-4" />
         </Button>
-        <Button variant="outline" size="icon-sm">
+        <Button variant="outline" size="icon">
           <Monitor className="size-4" />
         </Button>
       </ButtonGroup>
@@ -40,7 +40,7 @@ function GroupedThemeToggle({
     <ButtonGroup>
       <Button
         variant={theme === "light" ? "secondary" : "outline"}
-        size="icon-sm"
+        size="icon"
         onClick={() => setTheme("light")}
         aria-label="Light theme"
       >
@@ -48,7 +48,7 @@ function GroupedThemeToggle({
       </Button>
       <Button
         variant={theme === "dark" ? "secondary" : "outline"}
-        size="icon-sm"
+        size="icon"
         onClick={() => setTheme("dark")}
         aria-label="Dark theme"
       >

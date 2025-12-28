@@ -42,6 +42,12 @@
       "description": "Copy this link to your RSS reader (Reeder / Inoreader / Feedly / NetNewsWire, etc.) to subscribe.",
       "copyFeed": "Copy RSS Feed URL",
       "feedCopied": "RSS feed URL copied!"
+    },
+    "launchSaaS": {
+      "title": "Build Your SaaS Faster",
+      "subtitle": "Ship your SaaS product in hours, not weeks",
+      "description": "LaunchSaaS is a comprehensive Next.js boilerplate that includes authentication, payments, database, email, and more. Stop reinventing the wheel and focus on building your unique features.",
+      "cta": "Explore LaunchSaaS →"
     }
   },
   "categories": {

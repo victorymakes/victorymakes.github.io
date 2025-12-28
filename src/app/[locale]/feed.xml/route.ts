@@ -2,7 +2,7 @@ import { Feed } from "feed";
 import { getPosts } from "@/lib/fumadocs";
 import { metadata } from "@/configurations/metadata";
 import { author } from "@/configurations/author";
-import { env } from "@/lib/env";
+import { getURL } from "@/lib/i18n";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -10,20 +10,19 @@ type Props = {
 
 export async function GET(request: Request, { params }: Props) {
   const { locale } = await params;
-  const baseUrl = env.NEXT_PUBLIC_APP_URL;
 
   const feed = new Feed({
     title: metadata.name,
     description: metadata.description,
-    id: baseUrl,
-    link: `${baseUrl}/${locale}`,
+    id: getURL("", locale),
+    link: getURL("", locale),
     language: locale,
-    image: `${baseUrl}/avatar.png`,
-    favicon: `${baseUrl}/favicon.ico`,
+    image: getURL("/avatar.png", locale),
+    favicon: getURL("/favicon.ico", locale),
     copyright: `All rights reserved ${new Date().getFullYear()}, ${author.name}`,
     updated: new Date(),
     feedLinks: {
-      rss2: `${baseUrl}/${locale}/feed.xml`,
+      rss2: getURL("/feed.xml", locale, true),
     },
     author: {
       name: author.name,
@@ -35,7 +34,7 @@ export async function GET(request: Request, { params }: Props) {
   const posts = getPosts(locale);
 
   posts.forEach((post) => {
-    const postUrl = `${baseUrl}${post.url}`;
+    const postUrl = getURL(`/posts/${post.slugs.join("/")}`, locale);
 
     feed.addItem({
       title: post.data.title,
@@ -50,7 +49,7 @@ export async function GET(request: Request, { params }: Props) {
         },
       ],
       date: post.data.date,
-      image: post.data.cover ? `${baseUrl}${post.data.cover}` : undefined,
+      image: post.data.cover ? getURL(post.data.cover) : undefined,
       category: [
         {
           name: post.data.category.title,

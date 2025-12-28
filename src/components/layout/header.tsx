@@ -28,6 +28,7 @@ import {
 import Image from "next/image";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
 import { LocaleSwitcher } from "@/components/layout/locale-switcher";
+import { Search } from "@/components/layout/search";
 import {
   Collapsible,
   CollapsibleContent,
@@ -63,6 +64,8 @@ export function SiteHeader() {
         </div>
 
         <div className="flex items-center gap-3">
+          <Search />
+
           {header.actions.length > 0 && (
             <div className="hidden md:flex gap-2">
               {header.actions.map((action) => (

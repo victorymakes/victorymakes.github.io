@@ -15,6 +15,7 @@ const eslintConfig = defineConfig([
     ".source/**",
     "src/components/ui/**",
     "node_modules/**",
+    "cloudflare-env.d.ts",
   ]),
 ]);
 

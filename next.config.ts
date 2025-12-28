@@ -12,6 +12,10 @@ const nextConfig: NextConfig = {
         protocol: "https" as const,
         hostname: "images.gitbook.cn",
       },
+      {
+        protocol: "https" as const,
+        hostname: "launchsaas.org",
+      },
     ],
   },
 };

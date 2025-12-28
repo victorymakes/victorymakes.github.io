@@ -17,6 +17,8 @@ const postLoader = loader({
   source: posts.toFumadocsSource(),
 });
 
+export { postLoader };
+
 export type Post = ReturnType<typeof postLoader.getPages>[number];
 
 export function getPosts(locale?: string): Post[] {

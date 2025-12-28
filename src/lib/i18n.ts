@@ -1,5 +1,7 @@
-import type { createTranslator } from "next-intl";
 import { routing } from "@/i18n/routing";
+import { env } from "./env";
+
+const APP_URL = env.NEXT_PUBLIC_APP_URL;
 
 export const languages: Record<string, { name: string; flag: string }> = {
   en: { name: "English", flag: "🇺🇸" },
@@ -82,4 +84,28 @@ export const localeMap: Record<string, string> = {
 export function getOgLocale(locale?: string): string {
   // OpenGraph requires underscore format (en_US)
   return localeMap[locale || routing.defaultLocale].replace("-", "_");
+}
+
+// Helper function to generate alternate language URLs
+export function getAlternates(path: string) {
+  const languages: Record<string, string> = {};
+  routing.locales.forEach((loc) => {
+    languages[loc] = getURL(path, loc);
+  });
+  // Add x-default for the default locale
+  languages["x-default"] = getURL(path, routing.defaultLocale);
+  return { languages };
+}
+
+// Helper function to generate full URL for a given locale and path
+export function getURL(path: string, locale?: string, forceLocale = false) {
+  if (path.startsWith("http://") || path.startsWith("https://")) {
+    return path;
+  }
+  if (!locale) {
+    return `${APP_URL}${path}`;
+  }
+  const locPrefix =
+    forceLocale || locale !== routing.defaultLocale ? `/${locale}` : "";
+  return `${APP_URL}${locPrefix}${path}`;
 }

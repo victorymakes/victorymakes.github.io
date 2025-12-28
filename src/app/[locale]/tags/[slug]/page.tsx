@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { getPostsByTag, getTags } from "@/lib/fumadocs";
 import { Calendar, User, Tag as TagIcon, FolderOpen } from "lucide-react";
@@ -81,11 +82,12 @@ export default async function TagPage({ params }: Props) {
           >
             {post.data.cover && (
               <div className="md:w-48 flex-shrink-0">
-                <div className="aspect-video overflow-hidden rounded-md">
-                  <img
+                <div className="aspect-video overflow-hidden rounded-md relative">
+                  <Image
                     src={post.data.cover}
                     alt={post.data.title}
-                    className="h-full w-full object-cover transition-transform group-hover:scale-105"
+                    fill
+                    className="object-cover transition-transform group-hover:scale-105"
                   />
                 </div>
               </div>

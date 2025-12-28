@@ -1,8 +1,9 @@
 import { getTranslations } from "next-intl/server";
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { getPosts } from "@/lib/fumadocs";
-import { ArrowRight, Calendar, User, Rss } from "lucide-react";
+import { ArrowRight, Calendar, User, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PageContainer } from "@/components/layout/page-container";
 import { generateMetadata as genMetadata } from "@/lib/metadata";
@@ -40,6 +41,41 @@ export default async function HomePage({ params }: Props) {
         </div>
       </section>
 
+      {/* LaunchSaaS Promotion Section */}
+      <section className="container">
+        <a
+          href="https://launchsaas.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block group"
+        >
+          <div className="relative overflow-hidden rounded-xl border bg-gradient-to-r from-primary/5 to-primary/10 p-6 md:p-8 transition-all duration-300 hover:shadow-lg hover:border-primary/50 hover:-translate-y-1">
+            <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
+              <div className="flex-shrink-0">
+                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 transition-transform duration-300 group-hover:scale-110">
+                  <Rocket className="h-8 w-8 text-primary" />
+                </div>
+              </div>
+              <div className="flex-1 text-center md:text-left space-y-2">
+                <h3 className="text-xl font-bold">{t("launchSaaS.title")}</h3>
+                <p className="text-sm text-muted-foreground">
+                  {t("launchSaaS.description")}
+                </p>
+              </div>
+              <div className="flex-shrink-0">
+                <Button
+                  asChild
+                  variant="default"
+                  className="pointer-events-none"
+                >
+                  <span>{t("launchSaaS.cta")}</span>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </a>
+      </section>
+
       {/* Recent Posts Section */}
       <section className="container">
         <div className="flex items-center justify-between mb-8">
@@ -64,11 +100,12 @@ export default async function HomePage({ params }: Props) {
                 className="group flex flex-col overflow-hidden rounded-lg border bg-card transition-colors hover:bg-accent"
               >
                 {post.data.cover && (
-                  <div className="aspect-video overflow-hidden">
-                    <img
+                  <div className="aspect-video overflow-hidden relative">
+                    <Image
                       src={post.data.cover}
                       alt={post.data.title}
-                      className="h-full w-full object-cover transition-transform group-hover:scale-105"
+                      fill
+                      className="object-cover transition-transform group-hover:scale-105"
                     />
                   </div>
                 )}

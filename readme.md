@@ -81,7 +81,6 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 │   │   └── ...
 │   ├── i18n/            # Internationalization
 │   ├── lib/             # Utility functions
-│   ├── schemas/         # Zod schemas
 │   └── types/           # TypeScript types
 ├── public/              # Static assets
 ├── messages/            # i18n translation files

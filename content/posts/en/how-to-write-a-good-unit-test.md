@@ -32,7 +32,9 @@ By investing time in writing unit tests, you can improve the overall quality, ma
 # How
 
 1. **Use Descriptive Test Names**: _Don’t be afraid of long, descriptive names_. Give your tests meaningful and descriptive names that clearly indicate what aspect of the code is being tested. This makes it easier to understand the purpose of each test and helps in quickly identifying the cause of failures.
-   `[Component/Feature]_[Scenario]_[ExpectedResult]`
+   ```bash
+   [Component/Feature]_[Scenario]_[ExpectedResult]
+   ```
 2. **Test One Thing at a Time**: Each unit test should focus on testing a specific behaviour or functionality of a single unit (e.g., a function or a method). Avoid testing multiple behaviours in a single test case, as it makes it harder to identify the cause of failures.
 3. **Keep Tests Independent and isolated**: Unit tests should be independent of each other, meaning that the outcome of one test should not affect the outcome of another test. This helps in isolating issues and makes it easier to pinpoint failures.
 4. **Cover Happy Path First & Test Edge Cases**: Choose test cases that cover critical user interactions, edge cases, and important user workflows. Focus on areas that are prone to errors or have a high impact on user experience. The happy path usually is the simplest test to write and it **illustrates how to use the code **being tested.
