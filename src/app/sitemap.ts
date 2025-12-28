@@ -57,9 +57,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const posts = getPosts(locale);
     posts.forEach((post) => {
       const postPath = `/posts/${post.slugs.join("/")}`;
-      const images = post.data.cover
-        ? [getURL(post.data.cover, locale)]
-        : undefined;
+      const images = post.data.cover ? [getURL(post.data.cover)] : undefined;
 
       sitemapEntries.push({
         url: getURL(postPath, locale),

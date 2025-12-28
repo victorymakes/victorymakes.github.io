@@ -3,7 +3,7 @@ title: "[译]深入理解 Node.js Worker Threads"
 description: 最近工作中又有可能需要写 Node.js 应用了，距离上次写 Node.js 应用也有好些年了，所以就开始 重新熟悉下 Node.js 了。刚好最近又在学 Go，其最大的特点就是简单、轻量级的并发模型。非常容易 用它编写一个能够充分利用硬件资源的高性能应用。于是不免想起以前学习 Node.js 时会...
 date: 2020-07-22
 tags:
-  - id: "node.js"
+  - id: "nodejs"
     title: "Node.js"
   - id: "threads"
     title: "Threads"

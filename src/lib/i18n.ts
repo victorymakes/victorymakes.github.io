@@ -90,7 +90,7 @@ export function getOgLocale(locale?: string): string {
 export function getAlternates(path: string) {
   const languages: Record<string, string> = {};
   routing.locales.forEach((loc) => {
-    languages[loc] = getURL(path, loc);
+    languages[localeMap[loc] || loc] = getURL(path, loc);
   });
   // Add x-default for the default locale
   languages["x-default"] = getURL(path, routing.defaultLocale);

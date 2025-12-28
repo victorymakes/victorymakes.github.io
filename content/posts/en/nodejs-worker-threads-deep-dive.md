@@ -3,7 +3,7 @@ title: A Deep Dive into Node.js Worker Threads
 description: An in-depth explanation of Node.js worker threads, how they work internally, and how to use them efficiently for CPU-intensive workloads.
 date: 2020-07-22
 tags:
-  - id: "node.js"
+  - id: "nodejs"
     title: "Node.js"
   - id: "threads"
     title: "Threads"
