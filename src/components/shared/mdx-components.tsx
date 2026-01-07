@@ -2,10 +2,12 @@ import defaultMdxComponents from "fumadocs-ui/mdx";
 import type { MDXComponents } from "mdx/types";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
+import { Mermaid } from "@/components/shared/mermaid";
 
 export function getMDXComponents(components?: MDXComponents): MDXComponents {
   return {
     ...defaultMdxComponents,
+    Mermaid,
     hr: Separator,
     img: ({ className, src, alt, ...props }: React.ComponentProps<"img">) => {
       // Ensure src is a string, not an object

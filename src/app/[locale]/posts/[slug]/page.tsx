@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import type { Metadata } from "next";
 import { getPost, getPosts } from "@/lib/fumadocs";
 import {
@@ -19,6 +18,8 @@ import { Avatar } from "@radix-ui/react-avatar";
 import { AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { getMDXComponents } from "@/components/shared/mdx-components";
 import { generateMetadata as genMetadata } from "@/lib/metadata";
+import { Separator } from "@/components/ui/separator";
+import { BlogCover } from "@/components/shared/blog-cover";
 
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
@@ -70,20 +71,8 @@ export default async function PostPage({ params }: Props) {
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8">
         {/* Main Content */}
         <article className="min-w-0">
-          {/* Cover Image */}
-          {post.data.cover && (
-            <div className="mb-8 aspect-video overflow-hidden rounded-lg relative">
-              <Image
-                src={post.data.cover}
-                alt={post.data.title}
-                fill
-                className="object-cover"
-              />
-            </div>
-          )}
-
           {/* Article Header */}
-          <header className="mb-8 space-y-4">
+          <header className="mb-6 space-y-4">
             <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
               {post.data.title}
             </h1>
@@ -94,8 +83,16 @@ export default async function PostPage({ params }: Props) {
               </p>
             )}
 
+            {/* Cover Image */}
+            <BlogCover
+              title={post.data.title}
+              description={post.data.description}
+              coverImage={post.data.cover}
+              className="rounded-lg"
+            />
+
             {/* Meta Information - Mobile */}
-            <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground lg:hidden">
+            <div className="flex flex-wrap items-center justify-between gap-4 text-sm text-muted-foreground">
               {post.data.author && (
                 <div className="flex items-center gap-2">
                   <User className="h-4 w-4" />
@@ -115,8 +112,10 @@ export default async function PostPage({ params }: Props) {
             </div>
           </header>
 
+          <Separator className="my-6" />
+
           {/* Article Content */}
-          <div className="prose prose-gray dark:prose-invert max-w-none">
+          <div className="prose prose-no-margin min-w-0 max-w-none [&_a]:break-words [&_code]:break-words [&_pre]:overflow-x-auto [&_pre]:max-w-full [&_table]:block [&_table]:overflow-x-auto [&_table]:max-w-full">
             <MDXContent components={getMDXComponents()} />
           </div>
 

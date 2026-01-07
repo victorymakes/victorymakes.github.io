@@ -5,6 +5,7 @@ import {
   defineDocs,
 } from "fumadocs-mdx/config";
 import remarkMath from "remark-math";
+import { remarkMdxMermaid } from "fumadocs-core/mdx-plugins";
 
 export const posts = defineDocs({
   dir: "content/posts",
@@ -41,7 +42,7 @@ export const pages = defineDocs({
 
 export default defineConfig({
   mdxOptions: {
-    remarkPlugins: [remarkMath],
+    remarkPlugins: [remarkMath, remarkMdxMermaid],
     rehypeCodeOptions: {
       themes: {
         light: "github-light",

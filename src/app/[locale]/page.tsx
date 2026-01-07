@@ -1,6 +1,5 @@
 import { getTranslations } from "next-intl/server";
 import Link from "next/link";
-import Image from "next/image";
 import type { Metadata } from "next";
 import { getPosts } from "@/lib/fumadocs";
 import { ArrowRight, Calendar, User, Rocket } from "lucide-react";
@@ -8,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { PageContainer } from "@/components/layout/page-container";
 import { generateMetadata as genMetadata } from "@/lib/metadata";
 import { RssSubscribe } from "@/components/shared/rss-subscribe";
+import { BlogCover } from "@/components/shared/blog-cover";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -99,16 +99,12 @@ export default async function HomePage({ params }: Props) {
                 key={post.url}
                 className="group flex flex-col overflow-hidden rounded-lg border bg-card transition-colors hover:bg-accent"
               >
-                {post.data.cover && (
-                  <div className="aspect-video overflow-hidden relative">
-                    <Image
-                      src={post.data.cover}
-                      alt={post.data.title}
-                      fill
-                      className="object-cover transition-transform group-hover:scale-105"
-                    />
-                  </div>
-                )}
+                <BlogCover
+                  title={post.data.title}
+                  coverImage={post.data.cover}
+                  className="rounded-t-lg"
+                />
+
                 <div className="flex flex-1 flex-col p-6">
                   <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
                     <div className="flex items-center gap-1">
