@@ -88,7 +88,7 @@ function DefaultThemeToggle({
   return (
     <Button
       type="button"
-      variant="outline"
+      variant="ghost"
       size="icon"
       className="rounded-full cursor-pointer"
       aria-label="Toggle theme"

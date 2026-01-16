@@ -10,6 +10,7 @@ import { socialLinks } from "@/configurations/social-links";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
 import { LinkBadge } from "@/components/shared/link-badge";
+import { LocaleSwitcher } from "./locale-switcher";
 
 export function Footer() {
   const t = useTranslations();
@@ -118,7 +119,8 @@ export function Footer() {
             © {new Date().getFullYear()} {metadata.name}{" "}
             {t("footer.allRightsReserved")}.
           </p>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 justify-between">
+            <LocaleSwitcher />
             <ThemeToggle type="button-group" />
           </div>
         </div>

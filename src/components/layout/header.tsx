@@ -65,6 +65,10 @@ export function SiteHeader() {
 
         <div className="flex items-center gap-3">
           <Search />
+          <div className="hidden md:block">
+            <LocaleSwitcher size="icon" />
+            <ThemeToggle />
+          </div>
 
           {header.actions.length > 0 && (
             <div className="hidden md:flex gap-2">
@@ -85,11 +89,6 @@ export function SiteHeader() {
               ))}
             </div>
           )}
-
-          <div className="hidden md:block">
-            <LocaleSwitcher />
-          </div>
-          <ThemeToggle />
 
           <MobileNav />
         </div>
