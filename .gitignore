@@ -45,6 +45,5 @@ next-env.d.ts
 # others
 .next
 .source
-.claude
 .open-next
 cloudflare-env.d.ts
