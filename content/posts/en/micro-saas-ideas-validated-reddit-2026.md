@@ -6,7 +6,7 @@ author:
   avatar: "/avatar.png"
   url: "https://me.victoryhub.cc"
 date: 2026-04-04
-cover: "https://i.postimg.cc/XqnxwC9r/og.png"
+cover: "/posts/micro-saas-ideas-validated-reddit-2026/og.webp"
 category:
   id: growth
   title: Growth
